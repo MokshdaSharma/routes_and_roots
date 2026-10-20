@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+
+@import "tailwindcss";
+@source "..";
+
+/* ============================================================
+   ROUTES & ROOTS — JAISALMER GOLDEN CITY COLOR SYSTEM
+   Iconic Colors: Sonar Gold, Thar Desert Amber, Warm Sandstone, Terracotta
+   ============================================================ */
+
+:root {
+  /* Jaisalmer Golden Sandstone Accents */
+  --sonar-gold: #E5A93C;
+  --sonar-gold-light: #F3C469;
+  --sonar-gold-dark: #C68926;
+  --thar-amber: #D89430;
+
+  /* Desert Terracotta & Clay */
+  --desert-terracotta: #C85B2D;
+  --desert-terracotta-hover: #D76939;
+
+  /* Deep Desert Dusk & Night (Warm Sandstone Shadows) */
+  --jaisalmer-dusk: #150D07;
+  --jaisalmer-night: #1C120A;
+  --jaisalmer-surface: #24170D;
+  --jaisalmer-border: rgba(229, 169, 60, 0.22);
+  --jaisalmer-border-hover: rgba(229, 169, 60, 0.5);
+
+  /* Warm Sandstone Ivory Text */
+  --sandstone-ivory: #FBF4E8;
+  --sandstone-ivory-dim: rgba(251, 244, 232, 0.72);
+  --sandstone-ivory-muted: rgba(251, 244, 232, 0.45);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background-color: var(--jaisalmer-dusk);
+  color: var(--sandstone-ivory);
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(229, 169, 60, 0.35);
+  color: #FBF4E8;
+}
+
+/* ============================================================
+   TYPOGRAPHY
+   ============================================================ */
+
+.font-editorial {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-serif {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.heading-display {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.heading-eyebrow {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--sonar-gold);
+}
+
+/* ============================================================
+   JAISALMER CARDS & SURFACES
+   ============================================================ */
+
+.editorial-card {
+  background-color: var(--jaisalmer-surface);
+  border: 1px solid var(--jaisalmer-border);
+  box-shadow: 0 16px 45px rgba(12, 7, 3, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.editorial-card:hover {
+  border-color: var(--jaisalmer-border-hover);
+  box-shadow: 0 20px 55px rgba(12, 7, 3, 0.7), 0 0 30px rgba(229, 169, 60, 0.12);
+  transform: translateY(-2px);
+}
+
+.editorial-pill {
+  background: rgba(28, 18, 10, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--jaisalmer-border);
+}
+
+/* Ambient desert warm glow */
+.ambient-glow {
+  position: absolute;
+  width: 550px;
+  height: 550px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(229, 169, 60, 0.12) 0%, rgba(200, 91, 45, 0.04) 50%, transparent 70%);
+  pointer-events: none;
+  filter: blur(70px);
+}
+
+/* ============================================================
+   BUTTONS & CTAs
+   ============================================================ */
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1.85rem;
+  border-radius: 9999px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #150D07;
+  background: linear-gradient(135deg, #F3C469 0%, #E5A93C 50%, #C68926 100%);
+  box-shadow: 0 8px 25px rgba(229, 169, 60, 0.35);
+  transition: all 0.25s ease-out;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #FFE19C 0%, #F3C469 50%, #D89430 100%);
+  box-shadow: 0 12px 32px rgba(229, 169, 60, 0.5), 0 0 20px rgba(243, 196, 105, 0.3);
+  transform: translateY(-2px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1.75rem;
+  border-radius: 9999px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--sandstone-ivory);
+  background: rgba(251, 244, 232, 0.05);
+  border: 1px solid var(--jaisalmer-border);
+  transition: all 0.25s ease-out;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background: rgba(229, 169, 60, 0.15);
+  border-color: var(--sonar-gold);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+/* ============================================================
+   EDITORIAL DIVIDERS & TEXTURE
+   ============================================================ */
+
+.section-padding {
+  padding-top: clamp(4.5rem, 8vw, 7.5rem);
+  padding-bottom: clamp(4.5rem, 8vw, 7.5rem);
+}
+
+.sand-line {
+  height: 1px;
+  background: linear-gradient(90deg, var(--sonar-gold) 0%, rgba(229, 169, 60, 0.1) 100%);
+}
+
+.sand-gradient-text {
+  background: linear-gradient(135deg, #FFF6E5 0%, #F3C469 50%, #E5A93C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ticket-divider {
+  position: relative;
+  border-top: 1px dashed rgba(229, 169, 60, 0.3);
+  margin: 1.5rem 0;
+}
+
+.ticket-divider::before,
+.ticket-divider::after {
+  content: '';
+  position: absolute;
+  top: -8px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--jaisalmer-night);
+}
+
+.ticket-divider::before {
+  left: -20px;
+}
+
+.ticket-divider::after {
+  right: -20px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--jaisalmer-dusk);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--sonar-gold-dark);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--sonar-gold);
+}
+
+/* ============================================================
+   PREMIUM ANIMATIONS
+   ============================================================ */
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeIn {
+  animation: fadeIn 0.4s ease-out both;
+}
+
+@keyframes floatGlow {
+  0%, 100% { transform: translateY(0px) scale(1); opacity: 0.7; }
+  50%       { transform: translateY(-18px) scale(1.05); opacity: 1; }
+}
+.animate-floatGlow {
+  animation: floatGlow 7s ease-in-out infinite;
+}
+
+@keyframes shimmerSlide {
+  0%   { transform: translateX(-100%) skewX(-12deg); }
+  100% { transform: translateX(250%) skewX(-12deg); }
+}
+
+/* Card shimmer on hover */
+.editorial-card {
+  position: relative;
+  overflow: hidden;
+}
+.editorial-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(229, 169, 60, 0.06) 50%,
+    transparent 100%
+  );
+  transform: translateX(-200%) skewX(-12deg);
+  pointer-events: none;
+  z-index: 1;
+}
+.editorial-card:hover::after {
+  animation: shimmerSlide 0.85s ease-out both;
+}
+
+@keyframes sandDrift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.sand-gradient-animated {
+  background: linear-gradient(270deg, #FFF6E5, #F3C469, #E5A93C, #C68926);
+  background-size: 300% 300%;
+  animation: sandDrift 6s ease-in-out infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Entrance fade-up utility */
+@keyframes revealUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.reveal-up {
+  animation: revealUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.reveal-up-delay-1 { animation-delay: 0.1s; }
+.reveal-up-delay-2 { animation-delay: 0.2s; }
+.reveal-up-delay-3 { animation-delay: 0.35s; }
+.reveal-up-delay-4 { animation-delay: 0.5s; }
+
+/* Golden pulse ring */
+@keyframes goldRing {
+  0%   { box-shadow: 0 0 0 0 rgba(229, 169, 60, 0.45); }
+  70%  { box-shadow: 0 0 0 14px rgba(229, 169, 60, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(229, 169, 60, 0); }
+}
+.animate-goldRing {
+  animation: goldRing 2.4s ease-out infinite;
+}
+
+/* Section divider gradient line */
+.section-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(229,169,60,0.3) 30%, rgba(229,169,60,0.6) 50%, rgba(229,169,60,0.3) 70%, transparent 100%);
+}
+
+/* ============================================================
+   RESPONSIVE HELPERS & RESETS
+   ============================================================ */
+
+/* Generic button reset to eliminate default browser buttonface background */
+button {
+  background: transparent;
+  border: none;
+  font: inherit;
+  color: inherit;
+}
+
+@media (min-width: 1024px) {
+  .nav-desktop-links {
+    display: flex !important;
+  }
+  .nav-desktop-cta {
+    display: flex !important;
+  }
+  .nav-mobile-btn {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1023px) {
+  .nav-desktop-links {
+    display: none !important;
+  }
+  .nav-desktop-cta {
+    display: none !important;
+  }
+  .nav-mobile-btn {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-meta-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  }
+}
+
