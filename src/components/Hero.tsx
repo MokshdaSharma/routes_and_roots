@@ -90,7 +90,7 @@ export default function Hero({ trip }: HeroProps) {
             <RegisterButton
               variant="primary"
               label="Register for the Journey"
-              sublabel="Starts with ₹499 token"
+              sublabel="Starts with ₹999 token"
               className="py-4 px-8 text-sm shadow-[0_0_30px_rgba(229,169,60,0.3)]"
             />
 

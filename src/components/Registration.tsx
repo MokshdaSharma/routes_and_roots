@@ -72,7 +72,7 @@ export default function Registration({ trip }: RegistrationProps) {
 
             <p className="text-[#FBF4E8]/75 text-base sm:text-lg leading-relaxed mb-8 max-w-xl mx-auto font-light">
               {isFormConfigured
-                ? 'Fill out our official Google Form to submit your traveler details. Our team will verify and share the ₹499 token payment link to secure your seat.'
+                ? 'Fill out our official Google Form to submit your traveler details. Our team will verify and share the ₹999 token payment link to secure your seat.'
                 : "The Jaisalmer registration form will drop on our official Instagram handle. Follow us to get the link first before seats fill up."}
             </p>
 
@@ -111,10 +111,10 @@ export default function Registration({ trip }: RegistrationProps) {
               <div className="p-4 rounded-2xl bg-[#24170D] border border-[#E5A93C]/20">
                 <div className="flex items-center gap-2 text-xs font-bold text-[#E5A93C] mb-1.5">
                   <span className="w-5 h-5 rounded-full bg-[#C85B2D]/25 flex items-center justify-center text-[0.65rem] text-[#E5A93C]">2</span>
-                  Pay ₹499 Seat Token
+                  Pay ₹999 Seat Token
                 </div>
                 <p className="text-[0.72rem] text-[#FBF4E8]/65 leading-relaxed font-light">
-                  Transfer the non-refundable ₹499 registration fee to lock your slot.
+                  Transfer the <strong className="text-[#E5A93C]">strictly non-refundable ₹999</strong> registration fee to lock your slot.
                 </p>
               </div>
 
@@ -124,7 +124,7 @@ export default function Registration({ trip }: RegistrationProps) {
                   Seat Confirmed
                 </div>
                 <p className="text-[0.72rem] text-[#FBF4E8]/65 leading-relaxed font-light">
-                  Get added to the private WhatsApp group. Pay remaining balance (₹6,500 Quad / ₹6,800 Triple) by 10 Dec 2026.
+                  Get added to the private WhatsApp group. Pay remaining balance (₹6,000 Quad / ₹6,300 Triple) before 10 Dec 2026.
                 </p>
               </div>
             </div>
@@ -134,7 +134,7 @@ export default function Registration({ trip }: RegistrationProps) {
               <ShieldAlert size={18} className="text-[#E5A93C] flex-shrink-0 mt-0.5" />
               <p className="text-[0.75rem] text-[#FBF4E8]/80 leading-relaxed">
                 <strong className="text-[#FBF4E8] font-semibold">Important Notice: </strong>
-                Submitting the Google Form does not automatically confirm your seat. Registrations are finalized only after our team manually verifies your ₹499 token payment. The ₹499 registration fee is strictly non-refundable and reserves your slot. The remaining balance (₹6,500 for Quad Sharing or ₹6,800 for Triple Sharing) is due before 10 December 2026.
+                Submitting the Google Form does not automatically confirm your seat. Registrations are finalized only after our team manually verifies your ₹999 token payment. <strong className="text-[#E5A93C]">The ₹999 registration fee is strictly non-refundable</strong> and reserves your slot. The remaining balance (₹6,000 for Quad Sharing or ₹6,300 for Triple Sharing) is due before 10 December 2026.
               </p>
             </div>
 

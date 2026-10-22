@@ -156,7 +156,7 @@ export default function Itinerary({ trip }: ItineraryProps) {
               Ready to embark on this 4-day desert odyssey?
             </h4>
             <p className="text-xs text-[#FBF4E8]/65 mt-1">
-              Initial registration fee is only ₹499 to reserve your seat.
+              Initial registration fee is only ₹999 (strictly non-refundable) to reserve your seat.
             </p>
           </div>
 

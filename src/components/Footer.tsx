@@ -136,7 +136,7 @@ export default function Footer({ trip }: FooterProps) {
               </div>
               <div className="flex justify-between pt-1.5 border-t border-[#E5A93C]/10">
                 <span className="text-[#FBF4E8]/50">Seat Token:</span>
-                <span className="font-bold text-[#E5A93C]">₹499 (non-refundable)</span>
+                <span className="font-bold text-[#E5A93C]">₹999 (non-refundable)</span>
               </div>
               <div className="flex justify-between">
                 <span className="text-[#FBF4E8]/50">Balance Due:</span>
@@ -151,7 +151,7 @@ export default function Footer({ trip }: FooterProps) {
         <div className="mt-12 pt-6 border-t border-[#E5A93C]/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-[0.68rem] text-[#FBF4E8]/40">
           <p>© {year} {BRAND_CONFIG.name}. All rights reserved.</p>
           <p className="max-w-md text-center sm:text-right">
-            Registrations are processed via Google Forms. Seat allocation is confirmed only upon manual payment verification of the ₹499 fee.
+            Registrations are processed via Google Forms. Seat allocation is confirmed only upon manual payment verification of the ₹999 non-refundable fee.
           </p>
         </div>
 

@@ -21,8 +21,8 @@ export const BRAND_CONFIG = {
   tagline: 'College Trips • Bigger Stories',
   secondaryTagline: 'Somewhere Between the Dunes and the Stars',
   logoUrl: '/logo.png',
-  instagramHandle: '@routes_and.routes',
-  instagramUrl: 'https://www.instagram.com/routes_and.routes',
+  instagramHandle: '@routes_and.roots',
+  instagramUrl: 'https://www.instagram.com/routes_and.roots/',
   supportEmail: 'contact@routesandroots.com',
   featuredTripSlug: 'jaisalmer',
 };

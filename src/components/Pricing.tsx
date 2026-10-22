@@ -13,7 +13,7 @@ export default function Pricing({ trip }: PricingProps) {
   const [selectedTier, setSelectedTier] = useState<'quad' | 'triple'>('quad');
 
   const currentPrice = selectedTier === 'quad' ? (trip.quadPrice || 6999) : (trip.triplePrice || 7299);
-  const registrationFee = trip.registrationFee || 499;
+  const registrationFee = trip.registrationFee || 999;
   const currentBalance = currentPrice - registrationFee;
   const currentCapacity = selectedTier === 'quad' ? '4 Persons / Room & Swiss Tent' : '3 Persons / Room & Swiss Tent';
 
@@ -39,8 +39,21 @@ export default function Pricing({ trip }: PricingProps) {
             Choose Your Rooming Format.
           </h2>
           <p className="text-[#FBF4E8]/70 text-sm sm:text-base leading-relaxed">
-            Standard Quad Sharing at <span className="text-[#E5A93C] font-semibold">₹6,999</span> or upgraded Triple Sharing at <span className="text-[#E5A93C] font-semibold">₹7,299</span>. Reserve any slot with just an upfront ₹499 token.
+            Standard Quad Sharing at <span className="text-[#E5A93C] font-semibold">₹6,999</span> or upgraded Triple Sharing at <span className="text-[#E5A93C] font-semibold">₹7,299</span>. Reserve any slot with just an upfront <span className="text-[#E5A93C] font-bold">₹999 non-refundable</span> token.
           </p>
+        </div>
+
+        {/* Prominent Non-Refundable Fee Banner */}
+        <div className="max-w-4xl mx-auto mb-10 p-4 sm:p-5 rounded-2xl bg-[#C85B2D]/20 border-2 border-[#C85B2D]/60 flex items-center sm:items-start gap-3.5 shadow-xl">
+          <AlertCircle size={22} className="text-[#E5A93C] flex-shrink-0 mt-0.5" />
+          <div>
+            <h4 className="text-sm font-bold text-[#FBF4E8] uppercase tracking-wider mb-0.5">
+              Strict Non-Refundable Policy
+            </h4>
+            <p className="text-xs sm:text-sm text-[#FBF4E8]/85 leading-relaxed">
+              Please note that the initial <strong className="text-[#E5A93C]">₹999 seat registration token is strictly non-refundable</strong> under any circumstances. It is utilized immediately to pre-book private pushback coach seats, luxury Swiss camp inventory, and resort rooms.
+            </p>
+          </div>
         </div>
 
         {/* Main Grid: Ticket Card + Inclusions/Exclusions */}
@@ -139,7 +152,7 @@ export default function Pricing({ trip }: PricingProps) {
                   </span>
                 </div>
                 <p className="text-[0.72rem] text-[#FBF4E8]/65 leading-relaxed">
-                  Locks your expedition seat immediately upon registration. Strictly non-refundable.
+                  Locks your expedition seat immediately upon registration. <strong className="text-[#E5A93C]">Strictly non-refundable.</strong>
                 </p>
               </div>
 
@@ -163,8 +176,8 @@ export default function Pricing({ trip }: PricingProps) {
               <AlertCircle size={15} className="text-[#C96C43] flex-shrink-0 mt-0.5" />
               <p className="text-[0.72rem] text-[#F7F2E8]/85 leading-relaxed">
                 {selectedTier === 'quad'
-                  ? 'Quad Sharing (₹6,999/person): 4 persons per luxury Swiss camp tent & hotel room. Balance of ₹6,500 due before 10 Dec 2026.'
-                  : 'Triple Sharing (₹7,299/person): 3 persons per luxury Swiss camp tent & hotel room for extra comfort. Balance of ₹6,800 due before 10 Dec 2026.'}
+                  ? 'Quad Sharing (₹6,999/person): 4 persons per luxury Swiss camp tent & resort room. ₹999 non-refundable token + balance of ₹6,000 due before 10 Dec 2026.'
+                  : 'Triple Sharing (₹7,299/person): 3 persons per luxury Swiss camp tent & resort room for extra comfort. ₹999 non-refundable token + balance of ₹6,300 due before 10 Dec 2026.'}
               </p>
             </div>
 
@@ -172,7 +185,7 @@ export default function Pricing({ trip }: PricingProps) {
             <RegisterButton
               variant="primary"
               label={`Register for ${selectedTier === 'quad' ? 'Quad' : 'Triple'} Sharing`}
-              sublabel="Secure with ₹499 token"
+              sublabel="Secure with ₹999 token"
               className="w-full py-4 text-center justify-center text-sm shadow-xl"
             />
 
@@ -224,12 +237,12 @@ export default function Pricing({ trip }: PricingProps) {
                     <span className="text-xs text-[#FBF4E8]/50">/ person</span>
                   </div>
                   <p className="text-[0.72rem] text-[#FBF4E8]/70 leading-relaxed mb-3">
-                    4 travelers per luxury Swiss tent at Sam Dunes &amp; heritage hotel room.
+                    4 travelers per luxury Swiss tent at Sam Dunes &amp; heritage resort room.
                   </p>
                   <ul className="text-[0.7rem] text-[#FBF4E8]/75 space-y-1.5">
                     <li className="flex items-center gap-1.5">
                       <CheckCircle2 size={13} className="text-[#E5A93C] flex-shrink-0" />
-                      <span>₹499 token + ₹6,500 balance</span>
+                      <span>₹999 non-refundable token + ₹6,000 balance</span>
                     </li>
                     <li className="flex items-center gap-1.5">
                       <CheckCircle2 size={13} className="text-[#E5A93C] flex-shrink-0" />
@@ -264,12 +277,12 @@ export default function Pricing({ trip }: PricingProps) {
                     <span className="text-xs text-[#FBF4E8]/50">/ person</span>
                   </div>
                   <p className="text-[0.72rem] text-[#FBF4E8]/70 leading-relaxed mb-3">
-                    3 travelers per luxury Swiss tent at Sam Dunes &amp; heritage hotel room.
+                    3 travelers per luxury Swiss tent at Sam Dunes &amp; heritage resort room.
                   </p>
                   <ul className="text-[0.7rem] text-[#FBF4E8]/75 space-y-1.5">
                     <li className="flex items-center gap-1.5">
                       <CheckCircle2 size={13} className="text-[#E5A93C] flex-shrink-0" />
-                      <span>₹499 token + ₹6,800 balance</span>
+                      <span>₹999 non-refundable token + ₹6,300 balance</span>
                     </li>
                     <li className="flex items-center gap-1.5">
                       <CheckCircle2 size={13} className="text-[#E5A93C] flex-shrink-0" />
